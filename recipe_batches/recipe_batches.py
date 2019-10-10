@@ -3,7 +3,12 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  x = []
+  if len(recipe) > len(ingredients):
+    return 0
+  for key in recipe:
+    x.append(int(ingredients[key]/recipe[key]))
+  return min(x)
 
 
 if __name__ == '__main__':
